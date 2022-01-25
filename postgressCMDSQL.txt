@@ -1,0 +1,74 @@
+postgres=# selcet version();
+ERROR:  syntax error at or near "selcet"
+LINE 1: selcet version();
+        ^
+postgres=# select version();
+                          version
+------------------------------------------------------------
+ PostgreSQL 14.1, compiled by Visual C++ build 1914, 64-bit
+(1 row)
+
+
+postgres=# \l
+                             List of databases
+   Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges
+-----------+----------+----------+---------+-------+-----------------------
+ postgres  | postgres | UTF8     | C       | C     |
+ template0 | postgres | UTF8     | C       | C     | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+ template1 | postgres | UTF8     | C       | C     | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+(3 rows)
+
+
+postgres=# create database sql_demo
+postgres-# create database sql_demo;
+ERROR:  syntax error at or near "create"
+LINE 2: create database sql_demo;
+        ^
+postgres=# create database sql_demo;
+CREATE DATABASE
+postgres=# \c sql_demo
+You are now connected to database "sql_demo" as user "postgres".
+sql_demo=#
+
+
+
+ //file creation
+django-admin startproject djnagosampleproject .
+
+
+'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fundoo_notes_database',
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+
+
+.env
+
+logging.basicConfig(filename='employee_service.log', filemode='a', level=logging.DEBUG,
+                    format='%(levelname)s :: %(name)s :: %(asctime)s :: %(message)s')
+
+host='127.0.0.1'
+user='root'
+port='3306'
+pass='Geeta@123'
+
+  conn = mysql.connector.connect(host=os.getenv('host'), user=os.getenv('user'), port=os.getenv('port'), password=os.getenv('pass'),
+                                           database=' payroll_employeeservice')
+
+
+
+'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sql_demo',
+        'USER': 'postgres',
+        'PASSWORD': 'Geeta@123',
+        'HOST': 'Localhost',
+        'PORT': '5432',
+     }
+
+
+path("user_app/", include("user.urls"))
